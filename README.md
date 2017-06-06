@@ -1,6 +1,7 @@
 # HorizontalPicker
 A simple, customizable and easy to use picker where centre view is scaled up
 
+[![License Apache](https://img.shields.io/badge/license-Apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 ![Demo screen 1](https://raw.githubusercontent.com/adityagohad/HorizontalPicker/master/art/picker_demo.gif)
 
 ## QuickStart ##
