@@ -34,10 +34,10 @@ set layout manager of your recyclerVew
 To get selected view use ```onScrollStopListener```
 
 ```java
-        pickerLayoutManager.setOnScrollStopListener(new PickerLayoutManager.onScrollStopListener() {
-            @Override
-            public void selectedView(View view) {
-                    //Do your thing
-            }
-        });
+    pickerLayoutManager.setOnScrollStopListener(new PickerLayoutManager.onScrollStopListener() {
+        @Override
+        public void selectedView(View view) {
+                //Do your thing
+        }
+    });
 ```
