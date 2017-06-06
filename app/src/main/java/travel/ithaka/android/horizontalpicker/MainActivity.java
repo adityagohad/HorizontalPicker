@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         rv = (RecyclerView) findViewById(R.id.rv);
+
         PickerLayoutManager pickerLayoutManager = new PickerLayoutManager(this, PickerLayoutManager.HORIZONTAL, false);
         pickerLayoutManager.setChangeAlpha(true);
         pickerLayoutManager.setScaleDownBy(0.99f);
@@ -30,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
 
         adapter = new PickerAdapter(this, getData(100), rv);
         SnapHelper snapHelper = new LinearSnapHelper();
-
         snapHelper.attachToRecyclerView(rv);
         rv.setLayoutManager(pickerLayoutManager);
         rv.setAdapter(adapter);
