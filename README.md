@@ -1,6 +1,8 @@
 # HorizontalPicker
 A simple, customizable and easy to use picker where centre view is scaled up
 
+![Demo screen 1](https://raw.githubusercontent.com/adityagohad/HorizontalPicker/master/art/picker_demo.gif)
+
 ## QuickStart ##
 ### Include the Gradle dependency ###
 
