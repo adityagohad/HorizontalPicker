@@ -47,3 +47,17 @@ pickerLayoutManager.setOnScrollStopListener(new PickerLayoutManager.onScrollStop
     });
 }
 ```
+## Don't forget this ##
+To its core it is a recycler view with custom layout manager so if you forget to add ``` clipToPadding="false" ``` you will never be able to select first and last few elemets(values/views).
+<br>So always add paddingLeft and paddingRight like shown below. 
+```
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:clipToPadding="false"
+        android:paddingLeft="183dp"
+        android:paddingRight="183dp" />
+```
