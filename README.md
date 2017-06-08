@@ -11,9 +11,20 @@ A simple, customizable and easy to use picker where centre view is scaled up
 
 ```java
 dependencies {
-    compile 'com.github.adityagohad:HorizontalPicker:1.0.0'
+    compile 'com.github.adityagohad:HorizontalPicker:1.0.1'
 }
 ```
+Don't forget to add following to build.gradle(Project:{your_project_name>})
+
+```
+allprojects {
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+```
+
 ## How to use ##
 Your picker will be recyclerView and this lib is just a custom layout manager
 to initialize the PickerLayoutManager and set the properties
