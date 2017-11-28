@@ -22,24 +22,34 @@ public class PickerLayoutManager extends LinearLayoutManager {
     }
 
     @Override
+    public void onLayoutChildren(RecyclerView.Recycler recycler, RecyclerView.State state) {
+        super.onLayoutChildren(recycler, state);
+        scaleDownView();
+    }
+
+    @Override
     public int scrollHorizontallyBy(int dx, RecyclerView.Recycler recycler, RecyclerView.State state) {
         int orientation = getOrientation();
         if (orientation == HORIZONTAL) {
             int scrolled = super.scrollHorizontallyBy(dx, recycler, state);
-            float mid = getWidth() / 2.0f;
-            float unitScaleDownDist = scaleDownDistance * mid;
-            for (int i = 0; i < getChildCount(); i++) {
-                View child = getChildAt(i);
-                float childMid = (getDecoratedLeft(child) + getDecoratedRight(child)) / 2.0f;
-                float scale = 1.0f + (-1 * scaleDownBy) * (Math.min(unitScaleDownDist, Math.abs(mid - childMid))) / unitScaleDownDist;
-                child.setScaleX(scale);
-                child.setScaleY(scale);
-                if (changeAlpha) {
-                    child.setAlpha(scale);
-                }
-            }
+            scaleDownView();
             return scrolled;
         } else return 0;
+    }
+
+    private void scaleDownView() {
+        float mid = getWidth() / 2.0f;
+        float unitScaleDownDist = scaleDownDistance * mid;
+        for (int i = 0; i < getChildCount(); i++) {
+            View child = getChildAt(i);
+            float childMid = (getDecoratedLeft(child) + getDecoratedRight(child)) / 2.0f;
+            float scale = 1.0f + (-1 * scaleDownBy) * (Math.min(unitScaleDownDist, Math.abs(mid - childMid))) / unitScaleDownDist;
+            child.setScaleX(scale);
+            child.setScaleY(scale);
+            if (changeAlpha) {
+                child.setAlpha(scale);
+            }
+        }
     }
 
     @Override
