@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context="travel.ithaka.android.horizontalpicker.MainActivity">
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
