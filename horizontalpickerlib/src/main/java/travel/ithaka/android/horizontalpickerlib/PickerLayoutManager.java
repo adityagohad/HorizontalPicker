@@ -1,8 +1,8 @@
 package travel.ithaka.android.horizontalpickerlib;
 
 import android.content.Context;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 
 /**
@@ -42,6 +42,9 @@ public class PickerLayoutManager extends LinearLayoutManager {
         float unitScaleDownDist = scaleDownDistance * mid;
         for (int i = 0; i < getChildCount(); i++) {
             View child = getChildAt(i);
+            if (child == null) {
+                continue;
+            }
             float childMid = (getDecoratedLeft(child) + getDecoratedRight(child)) / 2.0f;
             float scale = 1.0f + (-1 * scaleDownBy) * (Math.min(unitScaleDownDist, Math.abs(mid - childMid))) / unitScaleDownDist;
             child.setScaleX(scale);
@@ -60,8 +63,12 @@ public class PickerLayoutManager extends LinearLayoutManager {
                 int selected = 0;
                 float lastHeight = 0f;
                 for (int i = 0; i < getChildCount(); i++) {
-                    if (lastHeight < getChildAt(i).getScaleY()) {
-                        lastHeight = getChildAt(i).getScaleY();
+                    View child = getChildAt(i);
+                    if (child == null) {
+                        continue;
+                    }
+                    if (lastHeight < child.getScaleY()) {
+                        lastHeight = child.getScaleY();
                         selected = i;
                     }
                 }
@@ -99,6 +106,6 @@ public class PickerLayoutManager extends LinearLayoutManager {
     }
 
     public interface onScrollStopListener {
-        public void selectedView(View view);
+        void selectedView(View view);
     }
 }
