@@ -4,7 +4,13 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/HorizontalPicker.iml" filepath="$PROJECT_DIR$/.idea/modules/HorizontalPicker.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/HorizontalPicker.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/HorizontalPicker.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/HorizontalPicker.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/HorizontalPicker.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/HorizontalPicker.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/HorizontalPicker.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/HorizontalPicker.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/HorizontalPicker.app.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/horizontalpickerlib/HorizontalPicker.horizontalpickerlib.iml" filepath="$PROJECT_DIR$/.idea/modules/horizontalpickerlib/HorizontalPicker.horizontalpickerlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/horizontalpickerlib/HorizontalPicker.horizontalpickerlib.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/horizontalpickerlib/HorizontalPicker.horizontalpickerlib.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/horizontalpickerlib/HorizontalPicker.horizontalpickerlib.main.iml" filepath="$PROJECT_DIR$/.idea/modules/horizontalpickerlib/HorizontalPicker.horizontalpickerlib.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/horizontalpickerlib/HorizontalPicker.horizontalpickerlib.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/horizontalpickerlib/HorizontalPicker.horizontalpickerlib.unitTest.iml" />
     </modules>
   </component>
 </project>
